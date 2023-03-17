@@ -1,6 +1,6 @@
 body{
     display:inline-flexbox;
-    background: linear-gradient(90deg, rgba(25,25,25,0.8),rgba(25,25,25,0.2),rgba(25,25,25,0.8)),url("mvgr1.png");
+    background: linear-gradient(90deg, rgba(25,25,25,0.8),rgba(25,25,25,0.2),rgba(25,25,25,0.8)),url('mvgr1.png');
     /* background: linear-gradient(90deg, rgba(25,25,25,0.8),rgba(25,25,25,0.2),rgba(25,25,25,0.8)),url("https://i.ytimg.com/vi/qDjEEVG34nQ/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGEYgZShjMA8=&rs=AOn4CLA9oY9FEkogrqN83HzMATfS_W0IDw"); */
     background-repeat: no-repeat;
     background-size: cover;

@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ebook.views import *
 from ebook import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('' , views.index, name="index1"),
+    path('' , index.as_view(), name="index1"),
     path('admin_page/' , views.admin_page, name="index2"),
     path('user/' , views.user_page, name="index3"),
 ]
