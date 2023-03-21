@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  overflow: hidden;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  font-weight:500;
+  letter-spacing: 1px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 24px 16px;
+  font-size: 25px;
+  width: 25%;
+}
+.tablink::after{
+    color: #252525;
+}
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: #252525;
+  display: none;
+  padding-top: 150px;
+  height: 100%;
+}
+.color{
+    color: #252525;
+    font-weight:600;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+
+#M-II {background-color: whitesmoke;}
+#CHEMISTRY {background-color: wheat;}
+#BEE {background-color: whitesmoke;}
+#ENGLISH {background-color: wheat;}
+
+
+/* Style the tab */
+.tab1 , .tab3 {
+  float: left;
+  border: 0;
+  width: 25%;
+  height: 500px;
+}
+.tab2 , .tab4 {
+  float: left;
+  border: 0;
+  width: 25%;
+  height: 500px;
+}
+
+
+/* Style the buttons inside the tab */
+.tab1 button ,.tab2 button,.tab3 button,.tab4 button{
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  height: 100px;
+  border: 0;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab1 button:hover,.tab3 button:hover{
+  background-color: #ddd;
+}
+.tab2 button:hover,.tab4 button:hover{
+  background-color: rgb(208, 183, 135);
+}
+
+/* Create an active/current "tab button" class */
+.tab1 button.active,.tab3 button.active{
+  background-color: #ccc;
+}
+.tab2 button.active,.tab4 button.active {
+  background-color: rgb(155, 141, 114);
+  /* background-color: rgb(170, 146, 101); */
+}
+/* Style the tab content */
+.tabcontent1, .tabcontent2 , .tabcontent3, .tabcontent4{
+  float: left;
+  padding: 20px 50px;
+  border: 0;
+  display: none;
+  width: 75%;
+  border-left: none;
+  height: 500px;
+}
+
+
+table{
+  border-collapse: collapse;
+  font-size: 25px;
+}
+
+#edit{
+    font-size: 25px;
+    float: right;
+    width: 100px;
+    height: 40px;
+}
+
+.editor{
+    padding: 25px;
+}
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('M-II', this, 'whitesmoke')" id="defaultOpen">M-II</button>
+<button class="tablink" onclick="openPage('CHEMISTRY', this, 'wheat')">CHEMISTRY</button>
+<button class="tablink" onclick="openPage('BEE', this, 'whitesmoke')">BEE</button>
+<button class="tablink" onclick="openPage('ENGLISH', this, 'wheat')">ENGLISH</button>
+
+<div id="M-II" class="tabcontent">
+  <div class="editor">
+    <button id="edit" onclick="">Edit</button>
+  </div>
+  <div class="tab1">
+    <button class="tablinks1" onclick="openUnit(event, 'M-II_Unit-1')" id="defaultOpen1">Unit-1</button>
+    <button class="tablinks1" onclick="openUnit(event, 'M-II_Unit-2')">Unit-2</button>
+    <button class="tablinks1" onclick="openUnit(event, 'M-II_Unit-3')">Unit-3</button>
+    <button class="tablinks1" onclick="openUnit(event, 'M-II_Unit-4')">Unit-4</button>
+    <button class="tablinks1" onclick="openUnit(event, 'M-II_Unit-5')">Unit-5</button>
+  </div>
+  
+  <div id="M-II_Unit-1" class="tabcontent1">
+    <table border="2px" cellpadding="45px">
+      <tr>
+          <th>Textbooks</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="M-II_Unit-2" class="tabcontent1">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="M-II_Unit-3" class="tabcontent1">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="M-II_Unit-4" class="tabcontent1">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="M-II_Unit-5" class="tabcontent1">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+</div>
+
+<div id="CHEMISTRY" class="tabcontent">
+  <div class="editor">
+    <button id="edit" onclick="">Edit</button>
+  </div>
+  <div class="tab2">
+    <button class="tablinks2" onclick="openUnit2(event, 'chem_Unit-1')" id="defaultOpen2">Unit-1</button>
+    <button class="tablinks2" onclick="openUnit2(event, 'chem_Unit-2')">Unit-2</button>
+    <button class="tablinks2" onclick="openUnit2(event, 'chem_Unit-3')">Unit-3</button>
+    <button class="tablinks2" onclick="openUnit2(event, 'chem_Unit-4')">Unit-4</button>
+    <button class="tablinks2" onclick="openUnit2(event, 'chem_Unit-5')">Unit-5</button>
+  </div>
+  
+  <div id="chem_Unit-1" class="tabcontent2">
+    <table border="2px" cellpadding="45px">
+      <tr>
+          <th>Textbooks</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="chem_Unit-2" class="tabcontent2">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table> 
+  </div>
+  
+  <div id="chem_Unit-3" class="tabcontent2">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="chem_Unit-4" class="tabcontent2">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="chem_Unit-5" class="tabcontent2">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+</div>
+
+<div id="BEE" class="tabcontent">
+  <div class="editor">
+    <button id="edit" onclick="">Edit</button>
+  </div>
+  <div class="tab3">
+    <button class="tablinks3" onclick="openUnit3(event, 'BEE_Unit-1')" id="defaultOpen3">Unit-1</button>
+    <button class="tablinks3" onclick="openUnit3(event, 'BEE_Unit-2')">Unit-2</button>
+    <button class="tablinks3" onclick="openUnit3(event, 'BEE_Unit-3')">Unit-3</button>
+    <button class="tablinks3" onclick="openUnit3(event, 'BEE_Unit-4')">Unit-4</button>
+    <button class="tablinks3" onclick="openUnit3(event, 'BEE_Unit-5')">Unit-5</button>
+  </div>
+  
+  <div id="BEE_Unit-1" class="tabcontent3">
+    <table border="2px" cellpadding="45px">
+      <tr>
+          <th>Textbooks</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="BEE_Unit-2" class="tabcontent3">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table> 
+  </div>
+  
+  <div id="BEE_Unit-3" class="tabcontent3">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="BEE_Unit-4" class="tabcontent3">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="BEE_Unit-5" class="tabcontent3">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+</div>
+
+<div id="ENGLISH" class="tabcontent">
+  <div class="editor">
+    <button id="edit" onclick="">Edit</button>
+  </div>
+  <div class="tab4">
+    <button class="tablinks4" onclick="openUnit4(event, 'ENGLISH_Unit-1')" id="defaultOpen4">Unit-1</button>
+    <button class="tablinks4" onclick="openUnit4(event, 'ENGLISH_Unit-2')">Unit-2</button>
+    <button class="tablinks4" onclick="openUnit4(event, 'ENGLISH_Unit-3')">Unit-3</button>
+    <button class="tablinks4" onclick="openUnit4(event, 'ENGLISH_Unit-4')">Unit-4</button>
+    <button class="tablinks4" onclick="openUnit4(event, 'ENGLISH_Unit-5')">Unit-5</button>
+  </div>
+  
+  <div id="ENGLISH_Unit-1" class="tabcontent4">
+    <table border="2px" cellpadding="45px">
+      <tr>
+          <th>Textbooks</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="ENGLISH_Unit-2" class="tabcontent4">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table> 
+  </div>
+  
+  <div id="ENGLISH_Unit-3" class="tabcontent4">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="ENGLISH_Unit-4" class="tabcontent4">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div id="ENGLISH_Unit-5" class="tabcontent4">
+    <table border="2px" cellpadding="65px">
+      <tr>
+          <th>Pdfs</th>
+          <td><a href="*" download>File</a></td>
+      </tr>
+      <tr>
+          <th>Website links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      <tr>
+          <th>YouTube links</th>
+          <td><a href="*">Click this link</a></td>
+      </tr>
+      
+    </table>
+  </div>
+</div>
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks1;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks1 = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks1.length; i++) {
+    tablinks1[i].style.backgroundColor = "";
+    tablinks1[i].classList.remove("color");
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+  elmnt.classList.add("color");
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+//M-II
+
+function openUnit(evt1, unit1) {
+  var i, tabcontent1, tablinks1;
+  tabcontent1 = document.getElementsByClassName("tabcontent1");
+  for (i = 0; i < tabcontent1.length; i++) {
+    tabcontent1[i].style.display = "none";
+  }
+  tablinks1 = document.getElementsByClassName("tablinks1");
+  for (i = 0; i < tablinks1.length; i++) {
+    tablinks1[i].className = tablinks1[i].className.replace(" active", "");
+  }
+  document.getElementById(unit1).style.display = "block";
+  evt1.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen1").click();
+
+//CHEMISTRY
+
+function openUnit2(evt2, unit2) {
+  var i, tabcontent2, tablinks2;
+  tabcontent2 = document.getElementsByClassName("tabcontent2");
+  for (i = 0; i < tabcontent2.length; i++) {
+    tabcontent2[i].style.display = "none";
+  }
+  tablinks2 = document.getElementsByClassName("tablinks2");
+  for (i = 0; i < tablinks2.length; i++) {
+    tablinks2[i].className = tablinks2[i].className.replace(" active", "");
+  }
+  document.getElementById(unit2).style.display = "block";
+  evt2.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen2").click();
+
+
+//BEE
+
+function openUnit3(evt3, unit3) {
+  var i, tabcontent3, tablinks3;
+  tabcontent3 = document.getElementsByClassName("tabcontent3");
+  for (i = 0; i < tabcontent3.length; i++) {
+    tabcontent3[i].style.display = "none";
+  }
+  tablinks3 = document.getElementsByClassName("tablinks3");
+  for (i = 0; i < tablinks3.length; i++) {
+    tablinks3[i].className = tablinks3[i].className.replace(" active", "");
+  }
+  document.getElementById(unit3).style.display = "block";
+  evt3.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen3").click();
+
+
+//ENGLISH
+
+function openUnit4(evt4, unit4) {
+  var i, tabcontent4, tablinks4;
+  tabcontent4 = document.getElementsByClassName("tabcontent4");
+  for (i = 0; i < tabcontent4.length; i++) {
+    tabcontent4[i].style.display = "none";
+  }
+  tablinks4 = document.getElementsByClassName("tablinks4");
+  for (i = 0; i < tablinks4.length; i++) {
+    tablinks4[i].className = tablinks4[i].className.replace(" active", "");
+  }
+  document.getElementById(unit4).style.display = "block";
+  evt4.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen4").click();
+
+</script>
+   
+</body>
+</html> 
