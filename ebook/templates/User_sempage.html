@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Choose the Semester</h1>
+	<form>
+		<label>
+			<input type="radio" name="semester" value="Sem-1" onclick="selectsemester('Sem-1_userpage')">Semester-1
+		</label><br>
+		<label>
+			<input type="radio" name="semester" value="Sem-2" onclick="selectsemester('Sem-2_userpage')">Semester-2
+		</label><br>
+		<label>
+			<input type="radio" name="semester" value="Sem-3" onclick="selectsemester('Sem-3_userpage')">Semester-3
+		</label><br>
+		<label>
+			<input type="radio" name="semester" value="Sem-4" onclick="selectsemester('Sem-4_userpage')">Semester-4
+		</label><br>
+		<label>
+			<input type="radio" name="semester" value="Sem-5" onclick="selectsemester('Sem-5_userpage')">Semester-5
+		</label><br>
+		<label>
+			<input type="radio" name="semester" value="Sem-6" onclick="selectsemester('Sem-6_userpage')">Semester-6
+		</label><br>
+		<label>
+			<input type="radio" name="semester" value="Sem-7" onclick="selectsemester('Sem-7_userpage')">Semester-7
+		</label><br>
+	</form>
+	<button onclick="renderPage()">OK</button>
+	<script>
+		var selectedsemester;
+		function selectsemester(semester) {
+			selectedsemester = semester;
+		}
+		function renderPage() {
+			if (selectedsemester) {
+				// construct the URL for the selected semester
+				var url = selectedsemester + '.html';
+				// open the URL in a new window
+				window.open(url, '_blank');
+			} else {
+				alert('Please select a semester!');
+			}
+		}
+	</script>
+</body>
+</html>

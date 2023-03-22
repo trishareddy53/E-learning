@@ -19,9 +19,9 @@ class index(View):
         aname= request.POST.get("aname")
         apwd= request.POST.get("apwd")
         if (uname in Uarr and upwd == "webcap"):
-            return render(request, 'user_page.html')
+            return render(request, 'User_sempage.html')
         elif (aname in Aarr and apwd == "webcap"):
-            return render(request, 'admin_page.html')
+            return render(request, 'Admin_sempage.html')
         return render(request, 'index.html')
 
 

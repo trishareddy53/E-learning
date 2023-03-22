@@ -23,4 +23,12 @@ urlpatterns = [
     path('' , index.as_view(), name="index1"),
     path('admin_page/' , views.admin_page, name="index2"),
     path('user/' , views.user_page, name="index3"),
+    path('Sem-1_userpage/' , views.admin_page, name="index4"),
+    path('Sem-1_adminpage/' , views.user_page, name="index5"),
+    path('Sem-2_userpage/' , views.admin_page, name="index6"),
+    path('Sem-2_adminpage/' , views.user_page, name="index7"),
+    path('Sem-3_userpage/' , views.admin_page, name="index8"),
+    path('Sem-3_adminpage/' , views.user_page, name="index9"),
+    path('Sem-4_userpage/' , views.admin_page, name="index10"),
+    path('Sem-4_adminpage/' , views.user_page, name="index11"),
 ]
